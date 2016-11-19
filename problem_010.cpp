@@ -1,4 +1,4 @@
-// Problem 3: Largest prime factor
+// Problem 10: Summation of primes
 
 #include <iostream>
 #include <cmath>
@@ -15,15 +15,9 @@ bool isPrime(long x) {
 int main(void) {
     long x = 0;
 
-    long a = 600851475143;
-    long s = sqrt(a);
-
-    for (long i=s; i>0; --i) {
+    for (long i=2; i<2000000; ++i) {
         if (isPrime(i)) {
-            if (a%i == 0) {
-                x = i;
-                break;
-            }
+            x += i;
         }
     }
 

@@ -1,4 +1,4 @@
-// Problem 3: Largest prime factor
+// Problem 7: 10001st prime
 
 #include <iostream>
 #include <cmath>
@@ -14,16 +14,12 @@ bool isPrime(long x) {
 
 int main(void) {
     long x = 0;
+    int n = 0;
 
-    long a = 600851475143;
-    long s = sqrt(a);
-
-    for (long i=s; i>0; --i) {
+    for (long i=2; n<10001; ++i) {
         if (isPrime(i)) {
-            if (a%i == 0) {
-                x = i;
-                break;
-            }
+            x = i;
+            n += 1;
         }
     }
 
